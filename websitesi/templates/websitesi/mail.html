@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Salt Hukuk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/jquery.timepicker.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'websitesi/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/style.css' %}">
+  </head>
+  <body>
+
+		<section class="ftco-section ftc-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'websitesi/images/about.jpg' %});">
+					</div>
+					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+	          <div class="heading-section mb-5 pl-md-5">
+	          	<div class="pl-md-5 ml-md-5">
+		          	<span class="subheading">salthukuk.com</span>
+		            <h2 class="mb-4">Web Sitenizden Haber Var</h2>
+	            </div>
+	          </div>
+	          <div class="pl-md-5 ml-md-5 mb-5">
+
+                  <h5>Kimden: </h5>
+                  <p>{{ isim }}</p>
+                  <h5>Kişinin İletişim Adresi: </h5>
+                  <p>{{ ulasim }}</p>
+                  <h5>İletinin Konusu: </h5>
+                  <p>{{ konu }}</p>
+                  <h5>Kişinin İletmek İstediği Mesaj: </h5>
+                  <p>{{ mesaj }}</p>
+              </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

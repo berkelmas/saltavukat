@@ -1,0 +1,73 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+    <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'websitesi/images/makaleler.jpg' %});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">Makalelerimize Göz Atın</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Ana Sayfa</a></span> <span>Makaleler</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">Son Gelişmeler</span>
+            <h2 class="mb-4">Hukuk Makalelerimiz</h2>
+            <p>Hukuki makalelerimiz siz müvekkillerimizi ve hukuki sorunları hakkında bir avukatın gözünden bilgi almak isteyen herkese faydalı nitelik taşımaktadır. İyi okumalar.</p>
+          </div>
+        </div>
+        <div class="row">
+
+            {% for makale in articles %}
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="block-20" style="background-image: url('{% static 'websitesi/images/lawwriting.jpg' %}');">
+              </a>
+              <div class="text d-flex py-4">
+                <div class="meta mb-3">
+                  <div><a href="#">{{ makale.makale_yayintarihi }}</a></div>
+                  <div><a href="#">{{ makale.user.first_name }}</a></div>
+
+                </div>
+                <div class="desc pl-3">
+	                <h3 class="heading"><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h3>
+	              </div>
+              </div>
+            </div>
+          </div>
+
+            {% endfor %}
+
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+
+                {% if articles.has_previous %}
+                  <li><a href="?page={{ articles.previous_page_number }}"><</a></li>
+                {% endif %}
+                    <li class="active"><span>{{ articles.number }}</span></li>
+              {% if articles.has_next %}
+                    <li><a href="?page={{ articles.paginator.num_pages }}">></a></li>
+              {% endif %}
+
+              </ul>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+{% include 'websitesi/components/footer.html' %}

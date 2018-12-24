@@ -1,0 +1,413 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+    <section class="home-slider js-fullheight owl-carousel">
+        <div class="slider-item js-fullheight" style="background-image:url({% static 'websitesi/images/bg_2.jpg' %});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ticaret &amp; İş Hukukunda Uzman Ekibimiz Sizlerle</h1>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ticaret ve İş Hukukundaki yıllara sarih tecrübelerini sizlerin hizmetine sunmaya hazır avukatlarımız ile gücünüze güç katın.</p>
+              <p><a id="randevu" href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Randevu Al</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'websitesi/images/bg_1.jpg' %});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Güçlü, Saygın ve Etkili Hukuk Hizmeti</h1>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Özel ve kamu hukuku alanlarında uzman kadrosu ile hukuksal danışmanlığa hazır</p>
+            <p><a id="randevu" href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Randevu Al</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+    </section>
+		
+		<section class="ftco-section ftco-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-lg-4">
+						<form action="#" method="POST" class="getaquote-form">
+
+                            {% csrf_token %}
+							<h3>Not Bırakın</h3>
+							<div class="wrap">
+	              <div class="form-group">
+	                <input name="notisim" type="text" class="form-control" placeholder="Ad-Soyad">
+	              </div>
+	              <div class="form-group">
+	                <input name="notmail" type="text" class="form-control" placeholder="Email Adresi">
+	              </div>
+	              <div class="form-group">
+	                <textarea name="notmesaj" id="" cols="30" rows="7" class="form-control" placeholder="Mesaj"></textarea>
+	              </div>
+	              <div class="form-group">
+	                <input name="notbirak" type="submit" value="Gönder" class="btn btn-primary py-3 px-5">
+	              </div>
+              </div>
+            </form>
+					</div>
+					<div class="col-md-7 col-lg-8">
+						<div class="row pl-md-4">
+		          <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services d-flex">
+		              <div class="icon d-flex justify-content-center align-items-center">
+		            		<span class="flaticon-family-room"></span>
+		              </div>
+		              <div class="media-body pl-4">
+		                <h3 class="heading">Aile Hukuku</h3>
+		                <p>Boşanma, mal paylaşımı, nafaka gibi sorunlarınızda uzman ekibimizle hizmetinize hazırız.</p>
+		              </div>
+		            </div>      
+		          </div>
+		          <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services d-flex">
+		              <div class="icon d-flex justify-content-center align-items-center">
+		            		<span class="flaticon-bar-chart"></span>
+		              </div>
+		              <div class="media-body pl-4">
+		                <h3 class="heading">İş Hukuku</h3>
+		                <p>Kıdem, ihbar tazminatı; işe iade süreçlerinizin takibinde buradayız.</p>
+		              </div>
+		            </div>    
+		          </div>
+		          <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services d-flex">
+		              <div class="icon d-flex justify-content-center align-items-center">
+		            		<span class="flaticon-auction"></span>
+		              </div>
+		              <div class="media-body pl-4">
+		                <h3 class="heading">Ticaret Hukuku</h3>
+		                <p>Haksız rekabet davaları, Şirketlerin alacak davaları, İflas ve iflas erteleme davaları, Marka-patent başvuru ve davalarında uzman ekimizle karşınızdayız.</p>
+		              </div>
+		            </div>      
+		          </div>
+		          <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services d-flex">
+		              <div class="icon d-flex justify-content-center align-items-center">
+		            		<span class="flaticon-prison"></span>
+		              </div>
+		              <div class="media-body pl-4">
+		                <h3 class="heading">Ceza Hukuku</h3>
+		                <p>Ağır Ceza Mahkemelerinde sanık müdafi ve müşteki vekili, Asliye Ceza Mahkemelerinde sanık müdafi ve müşteki vekili olunması gibi konularda hizmet veriyoruz.</p>
+		              </div>
+		            </div>      
+		          </div>
+
+		        </div>
+	        </div>
+        </div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftc-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'websitesi/images/about.jpg' %});">
+
+							<span></span>
+						</a>
+					</div>
+					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+	          <div class="heading-section mb-5 pl-md-5">
+	          	<div class="pl-md-5 ml-md-5">
+		          	<span class="subheading">Biz Kimiz?</span>
+		            <h2 class="mb-4">Misyonumuz</h2>
+	            </div>
+	          </div>
+	          <div class="pl-md-5 ml-md-5 mb-5">
+							<p>Salt & Partners, kuruluşundan bugüne kadar etkin ve disiplinli kadrosuyla,  bir çok alanda tüzel ve gerçek kişi müvekkillerine hukuki danışmanlık ve avukatlık hizmeti vermektedir.  Müvekkillerinin hukuki sorunlarını hızlı ve en etkin şekilde çözüme kavuşturarak hukuk dünyasında  adım adım zirveye ilerlemektedir....</p>
+                            <p>Ceza Hukuku, İş Hukuku, Şirketler Hukuku, Tazminat Hukuku, Sözleşmeler Hukuku, Aile ve Boşanma Hukuku ve Miras Hukuku başta olmak üzere hukukun tüm alanlarında  konusunda uzman akademisyen ve hukukçuların da desteği alınarak  dinamik, etkin ve genç kadrosuyla her türlü hukuki hizmetin en iyi şekilde sunulmasına özen gösterilmektedir.</p>
+							<p><a href="{% url 'about' %}" class="btn-custom">Daha Fazla <span class="ion-ios-arrow-forward"></span></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'websitesi/images/bg_3.jpg' %});" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row d-md-flex align-items-center">
+    			<div class="col-lg-4">
+    				<div class="heading-section pl-md-5 heading-section-white">
+	          	<div class="ftco-animate">
+		          	<span class="subheading">Bazı</span>
+		            <h2 class="mb-4">Detaylar</h2>
+	            </div>
+	          </div>
+    			</div>
+    			<div class="col-lg-8">
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="121">0</strong>
+		                <span>Müvekkil</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="896">0</strong>
+		                <span>Çözülmüş Dava</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="4">0</strong>
+		                <span>Kazanılmış Ödül</span>
+		              </div>
+		            </div>
+		          </div>
+
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftc-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center order-md-last" style="background-image: url({% static 'websitesi/images/about-2212.jpg' %});">
+					</div>
+					<div class="col-md-7 wrap-about ftco-animate">
+	          <div class="heading-section mb-5 pl-md-5">
+	          	<div class="pr-md-5 mr-md-5 text-md-right">
+		          	<span class="subheading">Salt Hukuk Olarak</span>
+		            <h2 class="mb-4">Vizyonumuz</h2>
+	            </div>
+	          </div>
+	          <div class="pr-md-5 pl-md-5 mr-md-5 mb-5">
+	            <div class="services-wrap d-flex">
+	              <div class="icon d-flex justify-content-center align-items-center">
+	            		<span class="flaticon-balance"></span>
+	              </div>
+	              <div class="media-body pr-4 order-md-first text-md-right">
+	                <h3 class="heading">Etik Değerlerimiz</h3>
+	                <p>Salt & Partners, avukatlık ve hukuki danışmanlık mesleğini etik değerlere ve insan onuruna saygılı olarak icra etmeyi temel prensip olarak benimsemiştir.</p>
+	              </div>
+	            </div>
+	            <div class="services-wrap d-flex">
+	              <div class="icon d-flex justify-content-center align-items-center">
+	            		<span class="flaticon-balance"></span>
+	              </div>
+	              <div class="media-body pr-4 order-md-first text-md-right">
+	                <h3 class="heading">Sır Tutma Yükümlülüğümüz</h3>
+	                <p>Paylaştığınız tüm bilgi ve belgeler müvekkil-avukat ilişkisi çerçevesinde ele alınarak, avukatın sır tutma yükümlülüğü gözetilerek hiçbir kurum, kuruluş veya şahıs ile paylaşılmamaktadır.</p>
+	              </div>
+	            </div>
+	            <div class="services-wrap d-flex">
+	              <div class="icon d-flex justify-content-center align-items-center">
+	            		<span class="flaticon-balance"></span>
+	              </div>
+	              <div class="media-body pr-4 order-md-first text-md-right">
+	                <h3 class="heading">Tecrübeli Ekibimiz</h3>
+	                <p>Salt & Partners, tecrübeli ekibi ile her davasında kendisine yenilikler katmış bir hukuk bürosu olarak; siz müvekkillerimizin hukuki sorunlarını çözmeye kendini adamıştır.</p>
+	              </div>
+	            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+      <br>
+      <br>
+		
+		<section class="ftco-section bg-primary">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+          	<span class="subheading">Çalışma Şeklimiz</span>
+            <h2 class="mb-4">Nasıl Çalışırız?</h2>
+            <p>Etkin, dinamik ve genç kadrosuyla en etkili ve kesin çözüm yolları ile daima yanınızdayız.</p>
+          </div>
+        </div>	
+				<div class="row steps d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="step d-flex align-self-stretch">
+							<span>#01</span>
+							<h3>Olay Analizi</h3>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="step d-flex align-self-stretch">
+							<span>#02</span>
+							<h3>Araştırma &amp; İnceleme</h3>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="step d-flex align-self-stretch">
+							<span>#03</span>
+							<h3>Başarı</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section mt-5">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+          	<span class="subheading">Takım</span>
+            <h2 class="mb-4">Avukatlarımızla Tanışın</h2>
+            <p>Salt & Partners Avukatlık Bürosunun Avukatları ile tanışın.</p>
+          </div>
+        </div>	
+				<div class="row justify-content-center">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img" style="background-image: url({% static 'websitesi/images/ozer.png' %});"></div>
+							<div class="text pt-4">
+                                <a href=""><h3>Av. Özer Öz</h3></a>
+								<span class="position mb-2">Yönetici Ortak</span>
+								<p>Avukat Özer ÖZ Salt & Partners Avukatlık Bürosunun kurucusu ve yönetici ortağıdır. İstanbul Üniversitesi Hukuk Fakültesinde lisans eğitimini başarı ile tamamlamıştır. Bahçeşehir Üniversitesi Sosyal Bilimler Enstitüsü Özel Hukuk alanında yüksek lisans eğitimi almaya devam etmektedir.  Marka ve Patent Hukuku, Ticaret ve İş Hukuku, İş ve Sosyal  Güvenlik Hukuku, Banka ve Finans Hukuku, Kira Hukuku, Tüketici ve Rekabet Hukuku, Vergi Hukuku, Bilişim ve E-Ticaret Hukuku, Enerji ve Maden Hukuku, Çevre Hukuku...</p>
+								<ul class="ftco-social d-flex">
+	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	              </ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+                            <a href=""><div class="img" style="background-image: url({% static 'websitesi/images/ridvan.png' %});"></div></a>
+							<div class="text pt-4">
+                                <h3>Av. Rıdvan Öz</h3>
+								<span class="position mb-2">Yönetici Ortak</span>
+								<p>Avukat Rıdvan ÖZ Salt - Partners Avukatlık Bürosunun yönetici ve kurucu ortağıdır. İstanbul Üniversitesi Hukuk Fakültesinde lisans eğitimini onur öğrencisi olarak tamamlamıştır. Daha sonrasında Bahçeşehir Üniversitesi Sosyal Bilimler Enstitüsü Kamu Hukuku  ve Eskişehir Osmangazi Üniversitesi Sosyal Bilimler Enstitüsü Siyaset Bilimi alanında yüksek lisans eğitimi almaya başlamıştır. Ceza Hukuku, İş ve Sosyal Güvenlik Hukuku, Sigorta ve Tazminat Hukuku, İcra ve İflas Hukuku, Miras Hukuku, Aile Hukuku, Spor  Hukuku...</p>
+								<ul class="ftco-social d-flex">
+                    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	              </ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+                            <a href=""><div class="img" style="background-image: url({% static 'websitesi/images/kiz.png' %});"></div></a>
+							<div class="text pt-4">
+								<h3>Av. Zenfira  ALİYEVA</h3>
+								<span class="position mb-2">Yönetici Ortak</span>
+								<p>İstanbul Üniversitesi Hukuk Fakültesi eğitimini tamamlamasının akabinde Bahçeşehir Üniversitesi’nde Sermaye Piyasaları ve Ticaret Hukuku yüksek lisans programında eğitim görmeye başlamış, halihazırda “Sermaye Piyasalarından Doğan Uyuşmazlıkların Tahkim Yoluyla Çözümü” adlı tezini yürütmektedir. Üniversite hayatı boyunca bir çok sivil toplum kuruluşu ve derneğin yönetiminde yer almış, sosyal sorumluluk projelerinin hayata geçirilmesinde önemli çalışmalarda bulunmuştur. Gerek üniversite...</p>
+								<ul class="ftco-social d-flex">
+	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	              </ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">Son Makaleler</span>
+            <h2 class="mb-4">Hukuki Yayınlarımız</h2>
+            <p>Salt & Partners Avukatlık bürosu olarak sürekli hem kendimizi geliştirmeye hem de size güncel hukuki bilgiler sunmaya özen gösteriyoruz.</p>
+          </div>
+        </div>	
+				<div class="row">
+
+            {% for makale in sonmakaleler %}
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="block-20" style="background-image: url('{% static 'websitesi/images/lawwriting.jpg' %}');">
+              </a>
+              <div class="text d-flex py-4">
+                <div class="meta mb-3">
+                  <div><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_yayintarihi }}</a></div>
+                  <div><a href="{% url 'avukatlar' %}">{{ makale.user.first_name }}</a></div>
+
+                </div>
+                <div class="desc pl-3">
+	                <h3 class="heading"><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h3>
+	              </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+			</div>
+		</section>
+
+{% include 'websitesi/components/alt.html' %}
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAppointmentLabel">Randevu Al</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="POST">
+                {% csrf_token %}
+              <div class="form-group">
+                <label for="appointment_name" class="text-black">Ad-Soyad</label>
+                <input name="isim" type="text" class="form-control" id="appointment_name" required>
+              </div>
+              <div class="form-group">
+                <label for="appointment_email" class="text-black">Email veya Telefon</label>
+                <input name="ulasim" type="text" class="form-control" id="appointment_email" required>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_date" class="text-black">Randevu Talep Ettiğiniz Tarih</label>
+                    <input name="tarih" type="text" class="form-control" id="appointment_date" required>
+                  </div>    
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_time" class="text-black">Randevu Talep Ettiğiniz Saat</label>
+                    <input name="zaman" type="text" class="form-control" id="appointment_time" required>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="form-group">
+                <label for="appointment_message" class="text-black">İletmek İstediğiniz Mesajınız</label>
+                <textarea name="mesaj" id="appointment_message" class="form-control" cols="30" rows="10" required></textarea>
+              </div>
+              <div class="form-group">
+                <input name="randevual" type="submit" value="Gönder" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  
+{% include 'websitesi/components/footer.html' %}

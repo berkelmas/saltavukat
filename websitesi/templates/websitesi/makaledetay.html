@@ -1,0 +1,46 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+    <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'websitesi/images/makaleler.jpg' %});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">{{ makale.makale_baslik  }}</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Ana Sayfa</a></span> <span>Makale</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 ftco-animate">
+            <h2 class="mb-3 text-center">{{ makale.makale_baslik }}</h2>
+                {{ makale.makale_mesaj|safe }}
+
+            <div class="about-author d-flex p-4 bg-light">
+              <div class="bio mr-5">
+                <img {% if makale.user.first_name == 'Av. Özer Öz' %} src="{% static 'websitesi/images/ozer.png' %}" {% elif makale.user.first_name == "Av. Rıdvan Öz" %} src="{% static 'websitesi/images/ridvan.png' %}" {% elif makale.user.first_name == "Av. Zenfira ALİYEVA" %} src="{% static 'websitesi/images/kiz.png' %}" {% endif %} alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>{{ makale.user.first_name }}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+              </div>
+            </div>
+
+
+
+          </div> <!-- .col-md-8 -->
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+{% include 'websitesi/components/footer.html' %}

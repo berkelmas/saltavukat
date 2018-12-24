@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Salt Hukuk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'websitesi/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/jquery.timepicker.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'websitesi/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'websitesi/css/style.css' %}">
+  </head>
+  <body>
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{% url 'index' %}"><span class="flaticon-auction"></span>Salt Hukuk</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item {% if nbar == 'index' %}active{% endif %}"><a href="{% url 'index' %}" class="nav-link">Ana Sayfa</a></li>
+	        	<li class="nav-item {% if nbar == 'about' %}active{% endif %}"><a href="{% url 'about' %}" class="nav-link">Hakkımızda</a></li>
+	        	<li class="nav-item {% if nbar == 'practices' %}active{% endif %}"><a href="{% url 'practices' %}" class="nav-link">Faaliyet Alanlarımız</a></li>
+	        	<li class="nav-item {% if nbar == 'avukatlar' %}active{% endif %}"><a href="{% url 'avukatlar' %}" class="nav-link">Avukatlar</a></li>
+	        	<li class="nav-item {% if nbar == 'makaleler' %}active{% endif %}"><a href="{% url 'articles' %}" class="nav-link">Makaleler</a></li>,
+                <li class="nav-item {% if nbar == 'c' %}active{% endif %}"><a href="https://barokart.com.tr/e-tahsilat.aspx" class="nav-link">E-Tahsilat</a></li>
+	          <li class="nav-item {% if nbar == 'contact' %}active{% endif %}"><a href="{% url 'contact' %}" class="nav-link">İletişim</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->

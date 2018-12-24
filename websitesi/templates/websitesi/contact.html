@@ -1,0 +1,148 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+    <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'websitesi/images/bg_1.jpg' %});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">Bize Ulaşın</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Ana Sayfa</a></span> <span>İletişim</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">İletişim Bilgileri</h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-6">
+            <p><span>Adres: </span> Merkez Mahallesi, Seçkin Sk. Merkez Mah. Seçkin Sok. 2-4/A, 34406 Çağlayan - Kağıthane/Kağıthane/İstanbul</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Telefon:</span> <a href="tel://02122686605">0(212) 268 66 05</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Email:</span> <a href="mailto:ozeroz@salthukuk.com">info@salthukuk.com</a></p>
+          </div>
+          <div class="col-md-3">
+
+          </div>
+        </div>
+        <div class="row block-9">
+          <div class="col-md-6 pr-md-5">
+               {% if messages %}
+                  <ul class="messages">
+                    {% for message in messages %}
+                      <div class="alert {{ message.tags }} ml-auto">{{ message }}</div>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+            <form action="#" method="POST">
+                {% csrf_token %}
+              <div class="form-group">
+                <input name="isim" type="text" class="form-control" placeholder="İsim" required>
+              </div>
+              <div class="form-group">
+                <input name="soyisim" type="text" class="form-control" placeholder="Soyisim" required>
+              </div>
+              <div class="form-group">
+                <input name="konu" type="text" class="form-control" placeholder="Konu" required>
+              </div>
+              <div class="form-group">
+                <input name="ulasim" type="text" class="form-control" placeholder="Size Ulaşabileceğimiz Telefon veya Email" required>
+              </div>
+              <div class="form-group">
+                <textarea name="mesaj" id="" cols="30" rows="7" class="form-control" placeholder="Mesaj" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Mesaj Gönder" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+
+          </div>
+
+          <div class="col-md-6 d-flex">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.6334411621865!2d28.969417265723326!3d41.07700452929371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfaa0f0510c542a88!2sDap!5e0!3m2!1sen!2str!4v1545562454648" width="500" height="440" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5 d-flex">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 text-center">© Salt & Partners</h2>
+              <p class="text-center">Her Hakkı Saklıdır. 2018</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAppointmentLabel">Request a Quote</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label for="appointment_name" class="text-black">Full Name</label>
+                <input type="text" class="form-control" id="appointment_name">
+              </div>
+              <div class="form-group">
+                <label for="appointment_email" class="text-black">Email</label>
+                <input type="text" class="form-control" id="appointment_email">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_date" class="text-black">Date</label>
+                    <input type="text" class="form-control" id="appointment_date">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_time" class="text-black">Time</label>
+                    <input type="text" class="form-control" id="appointment_time">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="appointment_message" class="text-black">Message</label>
+                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+{% include 'websitesi/components/footer.html' %}
