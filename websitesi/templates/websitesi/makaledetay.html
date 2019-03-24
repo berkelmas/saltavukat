@@ -27,11 +27,18 @@
 
             <div class="about-author d-flex p-4 bg-light">
               <div class="bio mr-5">
-                <img {% if makale.user.first_name == 'Av. Özer Öz' %} src="{% static 'websitesi/images/ozer.png' %}" {% elif makale.user.first_name == "Av. Rıdvan Öz" %} src="{% static 'websitesi/images/ridvan.png' %}" {% elif makale.user.first_name == "Av. Zenfira ALİYEVA" %} src="{% static 'websitesi/images/kiz.png' %}" {% endif %} alt="Image placeholder" class="img-fluid mb-4">
+                <img {% if makale.user.first_name == 'Av. Özer Öz' %} src="{% static 'websitesi/images/ozeroz.png' %}" {% elif makale.user.first_name == "Av. Rıdvan Öz" %} src="{% static 'websitesi/images/ridvan.png' %}" {% elif makale.user.first_name == "Av. Zenfira ALİYEVA" %} src="{% static 'websitesi/images/kiz.png' %}" {% endif %} alt="Image placeholder" class="img-fluid mb-4">
               </div>
               <div class="desc">
                 <h3>{{ makale.user.first_name }}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                <p>{% if makale.user.first_name == 'Av. Özer Öz' %}
+                    <p>Avukat Özer ÖZ Salt & Partners Avukatlık Bürosunun kurucusu ve yönetici ortağıdır. İstanbul Üniversitesi Hukuk Fakültesinde lisans eğitimini başarı ile tamamlamıştır. Bahçeşehir Üniversitesi Sosyal Bilimler Enstitüsü Özel Hukuk alanında yüksek lisans eğitimi almaya devam etmektedir. Marka ve Patent Hukuku, Ticaret ve İş Hukuku, İş ve Sosyal Güvenlik Hukuku, Banka ve Finans Hukuku, Kira Hukuku, Tüketici ve Rekabet Hukuku, Vergi Hukuku, Bilişim ve E-Ticaret Hukuku, Enerji ve Maden Hukuku, Çevre Hukuku , Dernekler ve Vakıflar Hukuku başta olmak üzere çeşitli alanlarda yerli ve yabancı müvekkillerine hizmet vermektedir.</p>
+                    {% elif makale.user.first_name == "Av. Rıdvan Öz" %}
+                    <p>Avukat Rıdvan ÖZ Salt - Partners Avukatlık Bürosunun yönetici ve kurucu ortağıdır. İstanbul Üniversitesi Hukuk Fakültesinde lisans eğitimini onur öğrencisi olarak tamamlamıştır. Daha sonrasında Bahçeşehir Üniversitesi Sosyal Bilimler Enstitüsü Kamu Hukuku ve Eskişehir Osmangazi Üniversitesi Sosyal Bilimler Enstitüsü Siyaset Bilimi alanında yüksek lisans eğitimi almaya başlamıştır. Ceza Hukuku, İş ve Sosyal Güvenlik Hukuku, Sigorta ve Tazminat Hukuku, İcra ve İflas Hukuku, Miras Hukuku, Aile Hukuku, Spor Hukuku, Gayrimenkul ve İnşaat Hukuku ve Yabancılar Hukuku başta olmak üzere çeşitli alanlarda yerli ve yabancı müvekkillerine hizmet vermektedir. </p>
+                    {% elif makale.user.first_name == "Av. Zenfira ALİYEVA" %}
+                    <p>İstanbul Üniversitesi Hukuk Fakültesi eğitimini tamamlamasının akabinde Bahçeşehir Üniversitesi’nde Sermaye Piyasaları ve Ticaret Hukuku yüksek lisans programında eğitim görmeye başlamış, halihazırda “Sermaye Piyasalarından Doğan Uyuşmazlıkların Tahkim Yoluyla Çözümü” adlı tezini yürütmektedir. Üniversite hayatı boyunca bir çok sivil toplum kuruluşu ve derneğin yönetiminde yer almış, sosyal sorumluluk projelerinin hayata geçirilmesinde önemli çalışmalarda bulunmuştur.</p>
+                  {% endif %}
+
               </div>
             </div>
 

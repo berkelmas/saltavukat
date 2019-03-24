@@ -10,6 +10,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
+import requests
+
 # Create your views here.
 def index(request):
     if 'randevual' in request.POST:
@@ -74,7 +76,10 @@ def contact(request):
         mesaj = request.POST.get('mesaj')
 
         iletisim = ContactForm(iletisim_isim= isim + " " + soyisim, iletisim_konu= konu, iletisim_mesaj=mesaj, iletisim_ulasim=ulasim)
-        #iletisim.save()
+        iletisim.save()
+
+        response = requests.get('https://api.netgsm.com.tr/sms/send/get/?usercode=5073978264&password=berk693693693&gsmno=5073978264&message=' + 'İletişim Talebinde Bulunan: \n' + isim + ' ' + soyisim + '\n' +'Mesajı: \n' + mesaj + '\n' +'Ulaşım Adresi: \n' + ulasim + '&msgheader=08508408276&dil=TR')
+
 
         subject = "İletişim Formu Geldi"
         message = mesaj + "\n <h1>Ulaşım Bilgisi:</h1> " + ulasim + "\n Ad-Soyad: " + isim + " " + soyisim

@@ -25,7 +25,7 @@ SECRET_KEY = '_f&o-2n1tm%+z9dmwl)*efeq%2^vr%@=3&)g+7(rgkezovo&nv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['demo.kurumsaly.com', '134.209.255.218']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'avukatsitesi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kurumsalydemodatabase',
+        'USER': 'kurumsalydemodatabaseuser',
+        'PASSWORD': 'berk693693693',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -120,6 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 
 from django.contrib.messages import constants as messages
 
@@ -147,4 +153,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "salthukuksite@gmail.com"
 EMAIL_HOST_PASSWORD = "ozer123456"
+
+
 
